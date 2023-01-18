@@ -1,0 +1,32 @@
+<div class="background-image" 
+	style="background-image: url('https://t3.ftcdn.net/jpg/03/62/24/10/240_F_362241054_WAwFfvPpJlF30BjitjkW4nFRyF7OSn8o.jpg');">
+<h2> Employee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th> phone_no</th>
+            <th> salary</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.firstName }} </td>
+            <td> {{ employee.lastName }} </td>
+            <td> {{ employee.emailId }} </td>
+            <td> {{ employee.phone_no}}</td>
+            <td> {{ employee.salary}}</td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
